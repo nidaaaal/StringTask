@@ -5,11 +5,10 @@
         static void Main(string[] args)
         {
 
-            var ab = Answer.Product("123");
+            var ab = Answer.Product("3,3,3");
             Console.WriteLine(ab);
 
         }
-
     }
 
     public class Answer
@@ -17,18 +16,14 @@
         public static int Product(string a)
         {
             int b = 1;
+           var arr = a.Split(',');  
+    
        
-            foreach (var item in a)
+            foreach (var c in arr)
             {
-                int c = Convert.ToInt32(item);
-
-                int d =  b * c;
-
-                b += d;
-
-
+                int c2 = int.Parse(c);  
+                b =  b * c2;
             }
-            Console.WriteLine(b);
 
             return b;
         }
